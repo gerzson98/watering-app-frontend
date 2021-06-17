@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"module": "es2020",
+		"moduleResolution": "node",
+		"paths": {
+			"src/*": ["src/*"],
+			"test/*": ["test/*"]
+		},
+		"target": "es2020"
+	},
+	"exclude": ["node_modules", "dist"]
+}
