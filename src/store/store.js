@@ -6,6 +6,7 @@ export function Store({ api }) { // eslint-disable-line no-unused-vars
 			text: 'error',
 			type: 'success',
 		},
+		plantInfoList: [],
 	};
 
 	const getters = {
