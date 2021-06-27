@@ -16,13 +16,13 @@
 			class="progress is-small is-full-width mt-2 mb-2"
 			:class="{ 'is-warning': wateringWarning, 'is-danger': wateringDanger }"
 		/>
-		<div class="is-full-width is-full-height is-flex is-flex-direction-row is-justify-content-space-around m-1 mt-3 ">
+		<div class="is-full-width is-full-height is-flex is-flex-direction-row is-justify-content-space-around m-1 mt-2 ">
 			<fa-icon
 				class="is-align-self-flex-start"
 				:icon="faCalendarAlt"
 			/>
 			<fa-icon
-				class="is-align-self-flex-end"
+				class="is-align-self-flex-end pt-2"
 				:class="waterIcon.class"
 				:icon="waterIcon.icon"
 			/>
