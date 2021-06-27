@@ -14,7 +14,7 @@
 			:value="plantInfo.waterPercent"
 			max="100"
 			class="progress is-small is-full-width mt-2 mb-2"
-			:class="{ 'is-warning': wateringWarning, 'is-danger': wateringDanger }"
+			:class="{ 'is-warning': plantInfo.isThirsty, 'is-danger': plantInfo.isStarving }"
 		/>
 		<div class="is-full-width is-full-height is-flex is-flex-direction-row is-justify-content-space-around m-1 mt-2 ">
 			<fa-icon
@@ -36,7 +36,6 @@
 
 <script>
 import { faCalendarAlt, faTint, faEdit } from '@fortawesome/free-solid-svg-icons';
-import { computed } from 'vue';
 export default {
 	name: 'WaPlantCard',
 	props: {
@@ -45,16 +44,12 @@ export default {
 			required: true,
 		},
 	},
-	setup(props) {
-
-		const wateringWarning = computed(() => props.plantInfo.waterPercent < 10);
-		const wateringDanger =  computed(() => props.plantInfo.waterPercent < 5);
-
+	setup() {
 		const waterIcon = {
 			class: 'waterIconStyle',
 			icon: faTint,
 		};
-		return { waterIcon, wateringWarning, wateringDanger, faEdit, faCalendarAlt };
+		return { waterIcon, faEdit, faCalendarAlt };
 	},
 };
 </script>
@@ -77,6 +72,9 @@ export default {
 		color: $progress-value-background-color;
 	}
 	/* Progress style */
+	.progress{
+		border: thin solid $progress-value-background-color;
+	}
 	.progress.is-warning{
 		border: thin solid $warning;
 	}

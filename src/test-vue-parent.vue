@@ -16,6 +16,8 @@ export default {
 			name: 'Az én anyósom',
 			species: 'Sansaveria',
 			waterPercent: 30,
+			isThirsty: false,
+			isStarving: false,
 		};
 		return { testCard };
 	},

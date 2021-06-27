@@ -6,6 +6,8 @@ export function PlantInfo({
 	waterPercent = 0,
 	isThirsty = true,
 	isStarving = true,
+	nextWateringDate,
+	waterQuantity,
 } = {}) {
-	return { id, name, species, imageURL, waterPercent, isThirsty, isStarving };
+	return { id, name, species, imageURL, waterPercent, isThirsty, isStarving, nextWateringDate: new Date(), waterQuantity };
 }
