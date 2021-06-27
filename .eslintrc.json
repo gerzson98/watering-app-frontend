@@ -32,9 +32,9 @@
 		"no-path-concat": "off",
 		"template-curly-spacing": "off",
 
-		"vue/html-closing-bracket-newline": ["error", { "multiline": "never" }],
+		"vue/html-closing-bracket-newline": ["error", { "multiline": "always" }],
 		"vue/html-closing-bracket-spacing": "error",
-		"vue/max-attributes-per-line": ["error", { "singleline": 3, "multiline": { "max": 1, "allowFirstLine": false } }],
+		"vue/max-attributes-per-line": ["warn", { "singleline": 1, "multiline": { "max": 1, "allowFirstLine": false } }],
 		"vue/prop-name-casing": ["error", "camelCase"],
 		"vue/html-indent": ["warn", "tab"],
 		"vue/singleline-html-element-content-newline": "off"

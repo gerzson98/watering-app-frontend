@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-	{ path: '/', component: () => import(/* webpackChunkName: "the-app" */ '../the-app') },
+	{ path: '/', component: () => import('../the-app') },
+	{ path: '/card-test', component: () => import('../test-vue-parent') },
 ];
 
 export const router = createRouter({
