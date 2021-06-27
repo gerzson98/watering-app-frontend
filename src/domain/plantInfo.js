@@ -1,13 +1,13 @@
 export function PlantInfo({
 	id='',
 	name = '',
-	species = '',
+	species = '', // the simple name of the species
 	imageURL = '',
-	waterPercent = 0,
-	isThirsty = true,
-	isStarving = true,
-	nextWateringDate,
-	waterQuantity,
+	waterPercent = 0, // how the time goes till the next watering date
+	isThirsty = true, // triggers the notification of the watering
+	isStarving = true, // triggers the harder notification
+	nextWateringDate = new Date(),
+	waterQuantity = 0, // in cl
 } = {}) {
-	return { id, name, species, imageURL, waterPercent, isThirsty, isStarving, nextWateringDate: new Date(), waterQuantity };
+	return { id, name, species, imageURL, waterPercent, isThirsty, isStarving, nextWateringDate, waterQuantity };
 }

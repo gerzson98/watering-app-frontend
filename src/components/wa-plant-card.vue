@@ -1,33 +1,33 @@
 <template>
-	<div class="box card-size is-rounded-default is-flex is-flex-direction-column p-0">
+	<div class="box card-size is-rounded-default is-flex is-flex-direction-column p-0 m-0">
 		<img
 			:src="plantInfo.imageURL"
 			class="card-img has-rounded-borders-top"
 		>
-		<span class="label mb-0 pl-2">
+		<span class="label m-0 pl-4">
 			{{ plantInfo.name }}
 		</span>
-		<span class="help mt-0 pl-2">
+		<span class="help m-0 pl-4">
 			{{ plantInfo.species }}
 		</span>
 		<progress
 			:value="plantInfo.waterPercent"
 			max="100"
-			class="progress is-small is-full-width mt-2 mb-2"
-			:class="{ 'is-warning': plantInfo.isThirsty, 'is-danger': plantInfo.isStarving }"
+			class="progress m-4 mt-2 mb-2"
 		/>
-		<div class="is-full-width is-full-height is-flex is-flex-direction-row is-justify-content-space-around m-1 mt-2 ">
+		<div class="is-full-width is-flex is-flex-direction-row is-justify-content-space-around">
 			<fa-icon
-				class="is-align-self-flex-start"
+				class="has-button-effects"
 				:icon="faCalendarAlt"
 			/>
 			<fa-icon
-				class="is-align-self-flex-end pt-2"
+				class="has-button-effects pt-1"
 				:class="waterIcon.class"
 				:icon="waterIcon.icon"
+				size="2x"
 			/>
 			<fa-icon
-				class="is-align-self-flex-start"
+				class="has-button-effects"
 				:icon="faEdit"
 			/>
 		</div>
@@ -49,6 +49,7 @@ export default {
 			class: 'waterIconStyle',
 			icon: faTint,
 		};
+
 		return { waterIcon, faEdit, faCalendarAlt };
 	},
 };
@@ -57,8 +58,8 @@ export default {
 <style lang="scss" scoped>
 	@import "../style/main";
 	.box.card-size {
-		width: 200px;
-		height: 370px;
+		width: 13em;
+		height: 24em;
 	}
 	.has-rounded-borders-top{
 		border-top-left-radius: $border-radius;
@@ -73,12 +74,7 @@ export default {
 	}
 	/* Progress style */
 	.progress{
-		border: thin solid $progress-value-background-color;
-	}
-	.progress.is-warning{
-		border: thin solid $warning;
-	}
-	.progress.is-danger{
-		border: thin solid $danger;
+		border: 0.01em solid $progress-value-background-color;
+		width: 11em;
 	}
 </style>
