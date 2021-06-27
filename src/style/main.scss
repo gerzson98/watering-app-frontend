@@ -1,8 +1,25 @@
+
+@import '~bulma/sass/utilities/initial-variables';
 @import '_theme';
 
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/base/_all';
 @import '~bulma/sass/helpers/_all';
-@import '~bulma/sass/elements/button';
-@import '~bulma/sass/elements/container';
+@import '~bulma/sass/elements/box';
 @import '~bulma/sass/elements/title';
+@import '~bulma/sass/elements/button';
+@import '~bulma/sass/elements/progress';
+@import '~bulma/sass/elements/container';
+@import '~bulma/sass/form/_all';
+@import '~bulma/sass/helpers/spacing';
+@import '~bulma/sass/helpers/typography';
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

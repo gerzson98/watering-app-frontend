@@ -16,11 +16,12 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{ test: /\.vue$/, loader: 'vue-loader' },
+			{ test: /\.vue$/, loader: 'vue-loader', options: { compilerOptions: { isCustomElement: tag => tag === 'fa-icon' } } },
 			{ test: /\.js$/, loader: 'babel-loader', include: projectPaths(['src', 'test']) },
 			{ test: /\.css$/, use: cssLoaders },
 			{ test: /\.(scss|sass)$/, use: [...cssLoaders, 'resolve-url-loader', 'sass-loader'] },
 			{ test: /\.(otf|ttf|woff|woff2)$/, type: 'asset/resource', generator: { filename: 'assets/[name]-[contenthash][ext]' } },
+			{ test: /\.(jpg|png)$/, loader: 'file-loader', options: { name: 'assets/images/[name]-[contenthash].[ext]'  } },
 		],
 	},
 	plugins: [

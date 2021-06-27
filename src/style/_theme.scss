@@ -1,1 +1,19 @@
+/* Screen width variables */
+$hd-width: 1408px;
+$screen-width: 1023px;
+$tablet-width: 769px;
+
+/* Base styling variables */
 $body-size: initial;
+$border-radius: 2em;
+
+/* transparent colors */
+$success-transparent: #72FF885b;
+$error-transparent: #FF01035b;
+$warning-transparent: #FFE3015b;
+
+/* Overriding bulma variables */
+$box-radius: $border-radius;
+
+$progress-bar-background-color: white;
+$progress-value-background-color: deepskyblue;
