@@ -30,7 +30,7 @@
 		"@babel/eslint-parser": "^7.13.14",
 		"@babel/preset-env": "^7.13.12",
 		"@fortawesome/fontawesome-svg-core": "^1.2.34",
-		"@fortawesome/vue-fontawesome": "^3.0.0-3",
+		"@fortawesome/vue-fontawesome": "^3.0.0-4",
 		"@lion/dialog": "^0.11.2",
 		"@storybook/addon-essentials": "^6.2.1",
 		"@storybook/addons": "^6.2.1",
@@ -69,5 +69,9 @@
 		"webpack-cli": "^4.6.0",
 		"webpack-dev-server": "^3.11.2",
 		"webpack-merge": "^5.7.3"
+	},
+	"dependencies": {
+		"@fortawesome/free-solid-svg-icons": "^5.15.3",
+		"@riovir/wc-fontawesome": "^0.1.6"
 	}
 }

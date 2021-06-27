@@ -1,3 +1,17 @@
 {
-	"title": "Welcome"
+	"logIn": {
+	  "title": "Log in",
+	  "userName": {
+		"label": "Username",
+		"placeholder": "Your username",
+		"error": "Username has to be 4-32 chars long!"
+	  },
+	  "password": {
+		"label": "Password",
+		"placeholder": "Your super secret password",
+		"error": "Password has to be 8-64 chars long!"
+	  },
+	  "submitButton": "ENTER",
+	  "registerLink": "register here"
+	}
 }
